@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex Informe"] 1791312754.341 "Informe.aux" "Informe.bbl" "Informe" 1791312811.94939 0
-  "./referencias.bib" 1791035531 359 16e9fa57a81be554f2cfb72d5eaf3156 ""
+["bibtex Informe"] 1791330880.81323 "Informe.aux" "Informe.bbl" "Informe" 1791330882.84409 0
+  "./referencias.bib" 1791329125 509 5653b45f8965bb001e8b887c72c0766f ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "Informe.aux" 1791312811 1170 277ac00e970cb21efd68952c5873b2dc "pdflatex"
+  "Informe.aux" 1791330882 1933 d149e642172ef318829aec4eb3da2666 "pdflatex"
   (generated)
   "Informe.bbl"
   "Informe.blg"
   (rewritten before read)
-["pdflatex"] 1791312810.26715 "c:/Users/FaNiLeMo/Desktop/ModelosEst/Nueva carpeta/obligatorio1-modest/Informe/Informe.tex" "Informe.pdf" "Informe" 1791312811.95007 0
+["pdflatex"] 1791330881.14445 "c:/Users/FaNiLeMo/Desktop/ModelosEst/Nueva carpeta/obligatorio1-modest/Informe/Informe.tex" "Informe.pdf" "Informe" 1791330882.84482 0
   "../Imagenes/Prob1-1.png" 1791310644 44188 b7ae60b9a19388b5907be5857d428d81 ""
   "../Imagenes/Prob1-2.png" 1791310653 34856 95071aab300e98c1017796c4b8b5619a ""
   "C:/Users/FaNiLeMo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1791035497 82011 97247c01f6bfb6f6d0c40fab12a08423 ""
@@ -27,20 +27,10 @@
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecrm1440.tfm" 993062128 3168 3bd7b08ba4330af81521911744311212 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ecti1000.tfm" 993062320 2840 5606e1a681c23005308de9d61c09a8ff ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/ectt1000.tfm" 993062340 1348 d70ddf2d5d512b838e50a335e385e919 ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1233951848 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm" 1233951848 1496 c79f6914c6d39ffb3759967363d1be79 ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm" 1233951848 1508 6e807ff901c35a5f1fde0ca275533df8 ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbsy10.tfm" 1136765053 1116 4e6ba9d7914baa6482fd69f67d126380 ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx5.tfm" 1136765053 1332 f817c21a1ba54560425663374f1b651a ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx7.tfm" 1136765053 1336 3125ccb448c1a09074e3aa4a9832f130 ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmib10.tfm" 1136765053 1524 554068197b70979a55370e6c6495f441 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1247596667 30251 6afa5cb1d0204815a708a080681d4674 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
-  "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb" 1247596666 36912 b448ef9ad9d7228ec3c6e71005136d55 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -101,11 +91,11 @@
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1751104012 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Informe.aux" 1791312811 1170 277ac00e970cb21efd68952c5873b2dc "pdflatex"
-  "Informe.bbl" 1791312754 1137 b372735fab3d0cee2f21cb0e786c800e "bibtex Informe"
-  "Informe.out" 1791312811 589 8e888c4c1cea7cdbdf14707865be9ec8 "pdflatex"
-  "Informe.tex" 1791312809 8564 56626b1be43e64fd6e132a593a68b147 ""
-  "c:/Users/FaNiLeMo/Desktop/ModelosEst/Nueva carpeta/obligatorio1-modest/Informe/Informe.tex" 1791312809 8564 56626b1be43e64fd6e132a593a68b147 ""
+  "Informe.aux" 1791330882 1933 d149e642172ef318829aec4eb3da2666 "pdflatex"
+  "Informe.bbl" 1791330881 1235 4743b158f26dcd2b6b0b7944412879de "bibtex Informe"
+  "Informe.out" 1791330882 932 4eacca79e0a74df5a39158e4f814df5e "pdflatex"
+  "Informe.tex" 1791330878 5815 30871891fd75f6820cabef0884d6f07b ""
+  "c:/Users/FaNiLeMo/Desktop/ModelosEst/Nueva carpeta/obligatorio1-modest/Informe/Informe.tex" 1791330878 5815 30871891fd75f6820cabef0884d6f07b ""
   (generated)
   "Informe.aux"
   "Informe.log"

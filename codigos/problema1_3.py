@@ -10,7 +10,7 @@ def problema1_3():
     theta_real = -1 / 3
 
     cantidad_muestras = 50
-    n = 10
+    n = 1000                      #CAMBIAR POR 10, 100 o 1000 segun corresponda
 
     estimaciones = []
 
@@ -73,8 +73,8 @@ def problema1_3():
     print(f"θ verdadero = {theta_real:.4f}")
     print(f"Media = {media:.4f}")
     print(f"Sesgo = {sesgo:.4f}")
-    print(f"Varianza = {varianza:.4f}")
-    print(f"MSE = {mse:.4f}")
+    print(f"Varianza = {varianza:.7f}")
+    print(f"MSE = {mse:.7f}")
 
 
 problema1_3()

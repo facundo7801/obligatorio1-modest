@@ -13,6 +13,8 @@
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
+\usepackage[font=small,labelfont=bf,skip=3pt]{caption}  % para \captionof
+\newcommand{\tema}[1]{\textbf{#1}\enspace}  
 
 
 
@@ -44,7 +46,7 @@
 \midrule
 Facundo Leite & 5.185.744-2 & \\
 Nicolas Martinez & 5.432.556-7\\
-Nombre Apellido 3 & 00.000.000-0\\
+Valentina Berón & 5.541.264-0\\
 \bottomrule
 \end{tabular}\\[3cm]
 
@@ -196,11 +198,50 @@ valor $\theta=-1/3$. Para $n=100$ y $n=1000$, el término
 $\operatorname{Sesgo}^2$ es muy pequeño, por lo que el MSE coincide
 con la varianza al redondear a cuatro decimales.
 
+\newpage
 
+\section{Problema 2: Regresión en el Conjunto de Datos “Boston Housing”}
+\subsection{Datos y método.}
+El objetivo es predecir el valor mediano de las viviendas (MEDV) a partir de los 13 atributos disponibles, entre ellos CRIM, RM y LSTAT. Son 506 viviendas, 13 atributos y ningún valor faltante. MEDV (miles de USD, mediana 21.2) tiene un tope en 50.
+Lo que más correlaciona con MEDV es LSTAT ($r=-0.74$, con forma curva) y RM ($+0.70$). Hay atributos muy correlacionados entre sí (RAD--TAX $0.91$, NOX--DIS $-0.77$, INDUS--NOX $0.76$), así que ya hay multicolinealidad en el modelo lineal.
+Separamos 80\,\% para entrenamiento (404) y 20\,\% para validación (102). El grado y $\lambda$ se eligen por validación cruzada (CV, 5 \emph{folds} mezclados) sobre entrenamiento, y validación queda como prueba final. Las características se estandarizan dentro de un \texttt{Pipeline}, para que Ridge penalice a todas por igual.
+ 
+\begin{center}
+  \includegraphics[width=\textwidth]{../Imagenes/problema2/figura_informe.png}
+  \captionof{figure}{Izquierda: MSE según el grado (color: conjunto; sólido: sin regularizar; punteado: Ridge con su $\lambda^*$). Centro: Ridge de grado 2, MSE según $\lambda$. Derecha: modelo elegido, predicción contra valor real en validación.}
+  \label{fig:p2}
+\end{center}
+ 
+
+\subsection{Características polinomiales.}
+Subir el grado reduce el error de entrenamiento, pero no el de viviendas nuevas (Tabla~\ref{tab:p2}). Grado 2 ya representa curvas e interacciones, pero sin regularizar mejora en validación y casi nada en CV: depende de qué viviendas le toquen. Grado 3 tiene 559 columnas para 404 viviendas: memoriza los datos y falla por completo en validación. La causa es la multicolinealidad: las columnas casi colineales llevan a coeficientes muy grandes y estos a predicciones inestables.
+ 
+\subsection{Regularización.}
+Ridge penaliza el tamaño de los coeficientes, y eso vuelve útiles a las características polinomiales. En grado 2 baja el MSE de CV de 23.6 a 15.8 y lo hace más estable entre \emph{folds}. En grado 3, el modelo pasa de inutilizable a competitivo. En el lineal no cambia nada (CV 24.3 con y sin Ridge), porque no hay sobreajuste que corregir. Comparando las gráficas con y sin regularización vimos que las predicciones más alejadas de la diagonal se acercan al utilizar Ridge. Además vimos que con $\lambda$ chico el modelo sobreajusta y con $\lambda$ grande predice casi el promedio; el barrido entre $10^{-3}$ y $10^{5}$ cubre ambos extremos y el óptimo ($\lambda^*\approx 0.87$) queda en el medio. 
+\begin{center}
+\small
+\captionof{table}{MSE por modelo. CV: promedio $\pm$ desvío en 5 \emph{folds}.}
+\label{tab:p2}
+\begin{tabular}{lrrrrrr}
+  \toprule
+  Modelo & Columnas & $\lambda^*$ & $\lVert\beta\rVert$ & Entren. & CV & Valid.\\
+  \midrule
+  Lineal (grado 1)       & 13  & ---  & 7.2     & 21.6 & $24.3 \pm 7.6$ & 24.3  \\
+  Grado 2                & 104 & ---  & 302     & 5.1  & $23.6 \pm 8.7$ & 14.3 \\
+  Grado 3                & 559 & ---  & 11\,726 & 0.04 & $15\,198 \pm 26\,400$ & 4\,988 \\
+  \midrule
+  Ridge grado 1          & 13  & 3.91 & 7.0     & 21.7 & $24.3 \pm 7.9$ & 24.4 \\
+  \textbf{Ridge grado 2} & 104 & 0.87 & 24.4    & 6.9  & $\mathbf{15.8 \pm 5.3}$ & 11.3 \\
+  Ridge grado 3          & 559 & 2.68 & 14.2    & 4.5  & $18.1 \pm 8.0$ & 10.4 \\
+  \bottomrule
+\end{tabular}
+\end{center}
+ 
+\subsection{Conclusión.}
+El mejor modelo es el polinomio de grado 2 con Ridge ($\lambda^*\approx 0.87$). Tiene el menor MSE de CV. Ridge de grado 3 da algo menos en validación (10.4 contra 11.3), pero queda peor en CV y usa cinco veces más columnas: preferimos el más simple. Los polinomios mejoran la predicción porque capturan relaciones no lineales como la de LSTAT, pero por sí solos sobreajustan; la regularización convierte esa flexibilidad en mejores predicciones sobre viviendas nuevas. El mayor error está en las 16 viviendas topeadas en 50, cuyo valor real se desconoce. 
 
 \newpage
 
-\setcounter{section}{2}
 \section{Problema 3: predicción de alturas}
 
 \subsection{Datos y elección del modelo}

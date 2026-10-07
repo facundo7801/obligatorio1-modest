@@ -51,7 +51,7 @@ sns.heatmap(corr, mask=mascara, annot=True, fmt='.2f', cmap='RdBu_r', vmin=-1, v
             annot_kws={'size': 8})
 plt.title('Matriz de correlación')
 plt.tight_layout()
-plt.savefig(carpeta_img / '01_matriz_correlacion.png', dpi=200, bbox_inches='tight')
+plt.savefig(carpeta_img / 'matriz_correlacion.png', dpi=200, bbox_inches='tight')
 plt.show()
 
 # (a) Correlación con MEDV, CON signo: el signo dice si el precio sube o baja con el atributo
@@ -80,7 +80,7 @@ for ax, col in zip(axes[1:], ['lstat', 'rm']):
     ax.set_title(f'{col.upper()} vs MEDV  (r = {corr.loc[col, "MEDV"]:.2f})')
 
 plt.tight_layout()
-plt.savefig(carpeta_img / '02_exploratorio_medv.png', dpi=200, bbox_inches='tight')
+plt.savefig(carpeta_img / 'exploratorio_medv.png', dpi=200, bbox_inches='tight')
 plt.show()
 
 r"""## 2. Preprocesamiento"""
@@ -232,14 +232,14 @@ def graf_pred(ax, modelo, titulo):
 fig, ax = plt.subplots(figsize=(7, 4.5))
 graf_mse_grado(ax)
 plt.tight_layout()
-plt.savefig(carpeta_img / '03_mse_vs_grado.png', dpi=200, bbox_inches='tight')
+plt.savefig(carpeta_img / 'mse_vs_grado.png', dpi=200, bbox_inches='tight')
 plt.show()
 
 fig, axes = plt.subplots(1, 2, figsize=(13, 4.5))
 for ax, d in zip(axes, [2, 3]):
     graf_mse_lambda(ax, d)
 plt.tight_layout()
-plt.savefig(carpeta_img / '04_mse_vs_lambda.png', dpi=200, bbox_inches='tight')
+plt.savefig(carpeta_img / 'mse_vs_lambda.png', dpi=200, bbox_inches='tight')
 plt.show()
 
 fig, axes = plt.subplots(1, 2, figsize=(11, 5))
@@ -247,7 +247,7 @@ graf_pred(axes[0], res_ols.loc[d_ols, 'modelo'], f'Grado {d_ols} sin regularizar
 graf_pred(axes[1], res_ridge.loc[d_ridge, 'modelo'],
           rf'Grado {d_ridge} con Ridge (λ = {res_ridge.loc[d_ridge, "lambda*"]:.2g})')
 plt.tight_layout()
-plt.savefig(carpeta_img / '05_prediccion_vs_real.png', dpi=200, bbox_inches='tight')
+plt.savefig(carpeta_img / 'prediccion_vs_real.png', dpi=200, bbox_inches='tight')
 plt.show()
 
 
@@ -260,29 +260,13 @@ resumen = pd.concat({
 }, names=['modelo', 'grado'])
 display(resumen.round(2))
 
-r"""## Observación basada en: Parte 4 del Ejercicio 1 del Práctico 2
-Repetimos la partición 30 veces. Los $\lambda$ quedan fijos en los hallados arriba, así que es una mirada aproximada.
-"""
 
-candidatos = {
-    'Lineal': lambda: LinearRegression(),
-    'Grado 2 sin regularizar': lambda: make_pipeline(
-        PolynomialFeatures(2, include_bias=False), StandardScaler(), LinearRegression()),
-    'Grado 2 Ridge': lambda: make_pipeline(
-        PolynomialFeatures(2, include_bias=False), StandardScaler(),
-        Ridge(alpha=res_ridge.loc[2, 'lambda*'])),
-    'Grado 3 Ridge': lambda: make_pipeline(
-        PolynomialFeatures(3, include_bias=False), StandardScaler(),
-        Ridge(alpha=res_ridge.loc[3, 'lambda*'])),
-}
 
-mse_part = {nombre: [] for nombre in candidatos}
-for semilla in range(30):
-    X_tr, X_va, y_tr, y_va = train_test_split(X, y, test_size=0.2, random_state=semilla)
-    for nombre, hacer in candidatos.items():
-        m = hacer().fit(X_tr, y_tr)
-        mse_part[nombre].append(mean_squared_error(y_va, m.predict(X_va)))
-
-tabla = pd.DataFrame(mse_part).agg(['median', 'min', 'max']).T
-tabla.columns = ['mediana', 'mínimo', 'máximo']
-display(tabla.round(2))
+fig, axes = plt.subplots(1, 3, figsize=(16, 4.6))
+graf_mse_grado(axes[0])
+graf_mse_lambda(axes[1], d_ridge)
+graf_pred(axes[2], res_ridge.loc[d_ridge, 'modelo'],
+          f'Mejor modelo: Ridge grado {d_ridge}')
+plt.tight_layout()
+plt.savefig(carpeta_img / 'figura_informe.png', dpi=200, bbox_inches='tight')
+plt.show()

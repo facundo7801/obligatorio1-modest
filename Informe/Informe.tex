@@ -40,15 +40,15 @@
 \textbf{Integrantes del grupo}\\[8pt]
 \begin{tabular}{@{}lll@{}}
 \toprule
-\textbf{Nombre} & \textbf{Cédula} & \textbf{Correo}\\[1pt]
+\textbf{Nombre} & \textbf{Cédula}\\[1pt]
 \midrule
 Facundo Leite & 5.185.744-2 & \\
-Nombre Apellido 2 & 00.000.000-0 & \\
-Nombre Apellido 3 & 00.000.000-0 & \\
+Nicolas Martinez & 5.432.556-7\\
+Nombre Apellido 3 & 00.000.000-0\\
 \bottomrule
 \end{tabular}\\[3cm]
 
-\textbf{Código del trabajo:} \url{https://github.com/usuario/repositorio}\\[2.5cm]
+\textbf{Código del trabajo:} \url{https://github.com/facundo7801/obligatorio1-modest.git}\\[2.5cm]
 
 
 \textbf{Profesores:} 
@@ -200,6 +200,52 @@ con la varianza al redondear a cuatro decimales.
 
 \newpage
 
+\setcounter{section}{2}
+\section{Problema 3: predicción de alturas}
+
+\subsection{Datos y elección del modelo}
+Se analizaron 45 respuestas con las alturas del estudiante, de sus padres y el sexo registrado. Se excluyeron dos respuestas incompletas (una sin sexo y otra sin altura del estudiante), quedando 43 casos: 36 masculinos y 7 femeninos.
+
+Las correlaciones estudiante--padre y estudiante--madre fueron $0{,}203$ y $0{,}180$. Se conservaron ambas alturas para evaluar su aporte conjunto y se incluyó el sexo, dadas las medias de $179{,}17$ cm en el grupo masculino y $162{,}86$ cm en el femenino. Se planteó el modelo lineal:
+\[
+y_i=c+a\,h_{p,i}+b\,h_{m,i}+d\,S_i+\varepsilon_i,
+\]  
+donde $h_p$ y $h_m$ son las alturas del padre y de la madre en centímetros, y $S=1$ para Masculino y $S=0$ para Femenino. 
+
+\subsection{Estimación de los coeficientes y ecuación final}
+Los cuatro coeficientes $a,b,d,c$ de la ecuación final se estimaron por mínimos cuadrados con los 43 casos completos, minimizando:
+\[
+\sum_{\text{43 personas}}
+\left[\text{altura real}-(a\cdot\text{altura padre}
++b\cdot\text{altura madre}+d\cdot S+c)\right]^2.
+\]
+Este ajuste produjo la siguiente ecuación, con las alturas expresadas en centímetros:
+\[
+\boxed{\widehat y=56{,}9971+0{,}2775\,h_p+0{,}3373\,h_m+17{,}4370\,S.}
+\]
+Manteniendo las otras variables iguales, cada centímetro adicional de altura del padre aumenta la predicción en $0{,}2775$ cm, y cada centímetro adicional de altura de la madre, en $0{,}3373$ cm. Para iguales alturas de los padres, la predicción masculina supera a la femenina en $17{,}4370$ cm. El valor $56{,}9971$ es la constante de la ecuación.
+
+\subsection{Evaluación del error de predicción}
+Para evaluar el modelo se utilizó validación cruzada \textit{leave one out}. En cada iteración se excluyó una persona y se estimaron nuevamente los cuatro coeficientes por mínimos cuadrados con las otras 42. Con las alturas de los padres y el sexo de la persona excluida se predijo su altura; su altura real se utilizó después para calcular el error como altura real menos altura predicha.
+
+Se repitió el procedimiento para las 43 personas. Denotando por $e_i$ el error de la persona excluida en la iteración $i$, el error cuadrático medio (MSE) y su raíz (RMSE) se calcularon como:
+\[
+MSE=\frac{1}{43}\sum_{i=1}^{43}e_i^2
+=21{,}58\ \mathrm{cm}^2,
+\qquad RMSE=\sqrt{MSE}=4{,}65\ \mathrm{cm}.
+\]
+Como referencia, predecir la media de las otras 42 personas produjo un RMSE de $8{,}01$ cm, mayor que el del modelo. 
+
+\begin{center}
+\includegraphics[width=0.86\textwidth]{../Imagenes/problema3_validacion.png}\\[-1pt]
+{\small\textit{Predicciones y residuos obtenidos al excluir cada persona del entrenamiento.}}
+\end{center}
+
+\subsection{Conclusiones}
+El modelo mejoró la predicción respecto a utilizar la media, aunque presenta errores individuales importantes. El RMSE no garantiza un margen de $\pm4{,}65$ cm para cada persona. La muestra pequeña, con solo siete casos femeninos, limita la generalización; la precisión debería contrastarse con nuevas observaciones.
+
+\newpage
+
 % ======================================================================
 % ANEXO
 % ======================================================================
@@ -233,7 +279,4 @@ con la varianza al redondear a cuatro decimales.
 
 \bibliographystyle{IEEEtran}
 \bibliography{referencias}
-\end{document}
-
-
 \end{document}

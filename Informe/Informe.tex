@@ -70,133 +70,83 @@ Octubre de 2026
 \newpage
 \section{Problema 1}
 
-\subsection{Simulación de una muestra}
+\subsection{Simulación y estimación}
 
 Se considera la densidad
 
-\[
-f_X(x;\theta)=\frac{1}{2}(1+\theta x),
-\qquad -1\leq x\leq1,
-\qquad -1\leq\theta\leq1,
-\]
+$$
+f_X(x;\theta)=\frac{1}{2}(1+\theta x),\qquad -1\leq x,\theta\leq1,
+$$
 
-y se desea simular una muestra tomando $\theta=-1/3$. En este caso,
+tomando $\theta=-1/3$. Para simular la muestra se utilizó aceptación-rechazo con $g(x)=1/2$, $x\sim U(-1,1)$, y $M=4/3$. Por lo tanto, un candidato se acepta si
 
-\[
-f_X(x)=\frac{1}{2}\left(1-\frac{x}{3}\right).
-\]
+$$
+u\leq\frac{f_X(x)}{Mg(x)}
+=\frac{3}{4}\left(1-\frac{x}{3}\right),\qquad u\sim U(0,1).
+$$
 
-Para generar la muestra se utilizó el método de aceptación-rechazo, tomando como
-densidad propuesta una distribución uniforme en $[-1,1]$:
+El procedimiento se repite hasta obtener $n$ observaciones aceptadas. Para $n=10$ se obtuvo, por ejemplo,
 
-\[
-g(x)=\frac{1}{2}.
-\]
+$$
+x=(0.0523,-0.7548,-0.7058,-0.3231,0.0924,0.2595,
+0.7691,-0.1610,0.3569,-0.1851).
+$$
 
-La constante utilizada es $M=4/3$, por lo que un candidato
-$x\sim U(-1,1)$ se acepta si
+Para una muestra $x_1,\ldots,x_n$, la verosimilitud es
 
-\[
-u\leq
-\frac{f_X(x)}{Mg(x)}
-=
-\frac{3}{4}\left(1-\frac{x}{3}\right),
-\qquad u\sim U(0,1).
-\]
+$$
+V_n(\theta)=\frac{1}{2^n}\prod_{i=1}^n(1+\theta x_i).
+$$
 
-El procedimiento se repite hasta obtener $n$ observaciones aceptadas.
+Se minimizó el negativo del logaritmo de la verosimilitud,
 
-Para una muestra de tamaño $10$ se obtuvo, por ejemplo,
+$$
+\ell_n(\theta)=n\log(2)-\sum_{i=1}^n\log(1+\theta x_i),
+$$
 
-\[
-\begin{split}
-x = (&0.0523,\,-0.7548,\,-0.7058,\,-0.3231,\,
-0.0924,\,0.2595,\\
-&0.7691,\,-0.1610,\,0.3569,\,-0.1851).
-\end{split}
-\]
+en $[-1,1]$, utilizando el algoritmo \textit{Golden Search}. Para la muestra anterior se obtuvo
 
-
-\subsection{Estimador de máxima verosimilitud}
-
-Para una muestra $x_1,\ldots,x_n$, la función de verosimilitud es
-
-\[
-V_n(\theta)
-=
-\prod_{i=1}^{n}f_X(x_i;\theta)
-=
-\frac{1}{2^n}
-\prod_{i=1}^{n}(1+\theta x_i).
-\]
-
-Para evitar trabajar directamente con el producto se utilizó el negativo del
-logaritmo de la verosimilitud:
-
-\[
-\ell_n(\theta)
-=
--\log V_n(\theta)
-=
-n\log(2)
--
-\sum_{i=1}^{n}\log(1+\theta x_i).
-\]
-
-El estimador de máxima verosimilitud se obtiene minimizando esta función en
-$[-1,1]$:
-
-\[
-\hat{\theta}
-=
-\underset{-1\leq\theta\leq1}{\operatorname{arg\,min}}
-\;\ell_n(\theta).
-\]
-
-Para realizar la minimización numérica se utilizó el algoritmo de
-\textit{Golden Search}.
-
-Para la muestra de tamaño $10$ obtenida anteriormente se obtuvo
-
-\[
+$$
 \boxed{\hat{\theta}=-0.2964}.
-\]
+$$
 
-
-
-\subsection{Evaluación del estimador para muestras de tamaño 10}
-
-Se generaron $50$ muestras independientes de tamaño $10$. Para cada muestra
-se calculó el estimador $\hat{\theta}$ mediante el procedimiento anterior.
-
-Tomando como valor verdadero $\theta=-1/3$, SE, el sesgo y la varianza:
-
-
-Los resultados obtenidos fueron:
+Se generaron $50$ muestras independientes para cada tamaño $n\in{10,100,1000}$. La tabla muestra la media de $\hat{\theta}$, el sesgo, la varianza y el error cuadrático medio (MSE), tomando $\theta=-1/3$ como valor verdadero.
 
 \begin{table}[htbp]
 \centering
-\caption{Resultados para muestras de tamaño 10.}
-\label{tab:resultados_n10}
-\begin{tabular}{ccccccc}
+\caption{Evaluación del estimador de máxima verosimilitud.}
+\label{tab:resultados_n}
+\small
+\begin{tabular}{cccccc}
 \toprule
-Cantidad & Tamaño & $\theta$ verdadero & $\overline{\hat{\theta}}$ & Sesgo & Varianza & MSE \\
+$n$ & $\theta$ & $\overline{\hat{\theta}}$ & Sesgo & Varianza & MSE \\
 \midrule
-50 & 10  & $-0.3333$ & $-0.2949$ & $0.0384$ & $0.2166$ & $0.2181$ \\
-50 & 100 & $-0.3333$ & $-0.3369$ & $-0.0036$ & $0.0243$ & $0.0243$ \\
-50 & 1000 & $-0.3333$ & $-0.3290$ & $0.0044$ & $0.0018$ & $0.0018$ \\
+10   & $-0.3333$ & $-0.2949$ & $0.0384$  & $0.2166$ & $0.2181$ \\
+100  & $-0.3333$ & $-0.3369$ & $-0.0036$ & $0.0243$ & $0.0243$ \\
+1000 & $-0.3333$ & $-0.3290$ & $0.0044$  & $0.0018$ & $0.0018$ \\
 \bottomrule
 \end{tabular}
-
 \end{table}
 
-Al aumentar el tamaño de la muestra, se observa una disminución
-considerable de la varianza del estimador y, en consecuencia, del MSE.
-Además, el sesgo se aproxima a cero. Esto indica que las estimaciones
-de $\hat{\theta}$ se concentran cada vez más alrededor del verdadero
-valor $\theta=-1/3$. Para $n=100$ y $n=1000$, el término
-$\operatorname{Sesgo}^2$ es muy pequeño, por lo que el MSE coincide
-con la varianza al redondear a cuatro decimales.
+Los resultados muestran que, al aumentar $n$, la varianza y el MSE disminuyen considerablemente, mientras que el sesgo se aproxima a cero. Por lo tanto, las estimaciones se concentran progresivamente alrededor del verdadero valor $\theta=-1/3$.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{../Imagenes/Prob1-1.png}
+\caption{Simulación mediante aceptación-rechazo.}
+\label{fig:simulacion}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{../Imagenes/Prob1-2.png}
+\caption{Log-verosimilitud negativa y estimación.}
+\label{fig:verosimilitud}
+\end{minipage}
+\end{figure}
+
 
 \newpage
 

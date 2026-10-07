@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.18)  6 OCT 2026 20:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.9.18)  7 OCT 2026 17:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -301,37 +301,61 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 )
 \Gin@req@height=\dimen184
 \Gin@req@width=\dimen185
+) (C:\Users\FaNiLeMo\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\FaNiLeMo\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen186
+\captionmargin=\dimen187
+\caption@leftmargin=\dimen188
+\caption@rightmargin=\dimen189
+\caption@width=\dimen190
+\caption@indent=\dimen191
+\caption@parindent=\dimen192
+\caption@hangindent=\dimen193
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count317
+\c@continuedfloat=\count318
+Package caption Info: hyperref package is loaded.
 ) (C:\Users\FaNiLeMo\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count317
+\l__color_backend_stack_int=\count319
 ) (Informe.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 11.
+
+
+LaTeX Warning: Label `fig:simulacion' multiply defined.
+
+
+LaTeX Warning: Label `fig:verosimilitud' multiply defined.
+
 )
 \openout1 = `Informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Info: Redefining \. on input line 22.
-LaTeX Info: Redefining \% on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -369,16 +393,16 @@ LaTeX Info: Redefining \% on input line 22.
 
 (C:\Users\FaNiLeMo\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
-\scratchdimen=\dimen186
+\scratchcounter=\count320
+\scratchdimen=\dimen194
 \scratchbox=\box55
-\nofMPsegments=\count319
-\nofMParguments=\count320
+\nofMPsegments=\count321
+\nofMParguments=\count322
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count321
-\MPscratchDim=\dimen187
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
+\MPscratchCnt=\count323
+\MPscratchDim=\dimen195
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks28
 ) (C:\Users\FaNiLeMo\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -386,25 +410,59 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\FaNiLeMo\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 24.
  (Informe.out) (Informe.out)
 \@outlinefile=\write3
 \openout3 = `Informe.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  [1
 
-{C:/Users/FaNiLeMo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-<../Imagenes/Prob1-1.png, id=48, 722.7pt x 433.62pt>
+{C:/Users/FaNiLeMo/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<../Imagenes/Prob1-1.png, id=66, 722.7pt x 433.62pt>
 File: ../Imagenes/Prob1-1.png Graphic file (type png)
 <use ../Imagenes/Prob1-1.png>
-Package pdftex.def Info: ../Imagenes/Prob1-1.png  used on input line 214.
-(pdftex.def)             Requested size: 384.11221pt x 230.46591pt.
-<../Imagenes/Prob1-2.png, id=50, 578.16pt x 361.35pt>
+Package pdftex.def Info: ../Imagenes/Prob1-1.png  used on input line 137.
+(pdftex.def)             Requested size: 245.82962pt x 147.49501pt.
+<../Imagenes/Prob1-2.png, id=68, 578.16pt x 361.35pt>
 File: ../Imagenes/Prob1-2.png Graphic file (type png)
 <use ../Imagenes/Prob1-2.png>
-Package pdftex.def Info: ../Imagenes/Prob1-2.png  used on input line 221.
+Package pdftex.def Info: ../Imagenes/Prob1-2.png  used on input line 144.
+(pdftex.def)             Requested size: 245.82962pt x 153.64064pt.
+ [2 <../Imagenes/Prob1-1.png> <../Imagenes/Prob1-2.png>]
+<../Imagenes/problema2/figura_informe.png, id=90, 1105.731pt x 324.4923pt>
+File: ../Imagenes/problema2/figura_informe.png Graphic file (type png)
+<use ../Imagenes/problema2/figura_informe.png>
+Package pdftex.def Info: ../Imagenes/problema2/figura_informe.png  used on input line 160.
+(pdftex.def)             Requested size: 512.14963pt x 150.29814pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 161.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 173.
+See the caption package documentation for explanation.
+
+[3 <../Imagenes/problema2/figura_informe.png>]
+<../Imagenes/problema3_validacion.png, id=103, 722.7pt x 289.08pt>
+File: ../Imagenes/problema3_validacion.png Graphic file (type png)
+<use ../Imagenes/problema3_validacion.png>
+Package pdftex.def Info: ../Imagenes/problema3_validacion.png  used on input line 231.
+(pdftex.def)             Requested size: 440.44899pt x 176.17973pt.
+ [4 <../Imagenes/problema3_validacion.png>]
+File: ../Imagenes/Prob1-1.png Graphic file (type png)
+<use ../Imagenes/Prob1-1.png>
+Package pdftex.def Info: ../Imagenes/Prob1-1.png  used on input line 251.
+(pdftex.def)             Requested size: 384.11221pt x 230.46591pt.
+File: ../Imagenes/Prob1-2.png Graphic file (type png)
+<use ../Imagenes/Prob1-2.png>
+Package pdftex.def Info: ../Imagenes/Prob1-2.png  used on input line 258.
 (pdftex.def)             Requested size: 384.11221pt x 240.06866pt.
- [3 <../Imagenes/Prob1-1.png> <../Imagenes/Prob1-2.png>] (Informe.bbl) [4] (Informe.aux
+ [5] (Informe.bbl) [6] (Informe.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -412,21 +470,25 @@ LaTeX Info: Redefining \% on input line 11.
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `Informe.out' has not changed.
-(rerunfilecheck)             Checksum: 4EACCA79E0A74DF5A39158E4F814DF5E;932.
+(rerunfilecheck)             Checksum: 43E00B0655B015FE1939FFD67B0B7EC7;2449.
  ) 
 Here is how much of TeX's memory you used:
- 11864 strings out of 467871
- 185612 string characters out of 5416924
- 632768 words of memory out of 5000000
- 40598 multiletter control sequences out of 15000+600000
- 633796 words of font info for 50 fonts, out of 8000000 for 9000
+ 13250 strings out of 467871
+ 212449 string characters out of 5416924
+ 654181 words of memory out of 5000000
+ 41948 multiletter control sequences out of 15000+600000
+ 641379 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,15n,79p,467b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Informe.pdf (4 pages, 223835 bytes).
+ 75i,12n,79p,847b,483s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\FaNiLeMo\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/FaNiLeMo/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on Informe.pdf (6 pages, 670371 bytes).
 PDF statistics:
- 331 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 563 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

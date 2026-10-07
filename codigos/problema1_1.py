@@ -106,7 +106,7 @@ def graficar_aceptacion_rechazo(
         alpha=0.2
     )
 
-    # Puntos aceptados
+    
     plt.scatter(
         aceptados_x,
         aceptados_y,
@@ -116,7 +116,7 @@ def graficar_aceptacion_rechazo(
         label='Aceptado'
     )
 
-    # Puntos rechazados
+    
     plt.scatter(
         rechazados_x,
         rechazados_y,
